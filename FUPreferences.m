@@ -61,6 +61,7 @@ static void settingsChanged(CFNotificationCenterRef center,void *observer,CFStri
 	HBLogDebug(@"[logSettings] self.diskUsageType             = %ld",(long)self.diskUsageType);
 	HBLogDebug(@"[logSettings] self.showAppUsage              = %@",self.showAppUsage?@"YES":@"NO");
 	HBLogDebug(@"[logSettings] self.showAppCounts             = %@",self.showAppCounts?@"YES":@"NO");
+	HBLogDebug(@"[logSettings] self.appNameType               = %ld",(long)self.appNameType);
 	HBLogDebug(@"[logSettings] self.appSortType               = %ld",(long)self.appSortType);
 	HBLogDebug(@"[logSettings] self.appSortOrder              = %ld",(long)self.appSortOrder);
 	HBLogDebug(@"[logSettings] self.showSubfolderUsage        = %@",self.showSubfolderUsage?@"YES":@"NO");
@@ -81,6 +82,7 @@ static void settingsChanged(CFNotificationCenterRef center,void *observer,CFStri
 	self.diskUsageType = FU_DEFAULT_DISK_USAGE_TYPE;
 	self.showAppUsage = FU_DEFAULT_SHOW_APP_USAGE;
 	self.showAppCounts = FU_DEFAULT_SHOW_APP_COUNTS;
+	self.appNameType = FU_DEFAULT_APP_NAME_TYPE;
 	self.appSortType = FU_DEFAULT_APP_SORT_TYPE;
 	self.appSortOrder = FU_DEFAULT_APP_SORT_ORDER;
 	self.showSubfolderUsage = FU_DEFAULT_SHOW_SUBFOLDER_USAGE;
@@ -112,6 +114,7 @@ static void settingsChanged(CFNotificationCenterRef center,void *observer,CFStri
 		if ((pref = [settings objectForKey:@"diskUsageType"])) self.diskUsageType = [pref integerValue];
 		if ((pref = [settings objectForKey:@"showAppUsage"])) self.showAppUsage = [pref boolValue];
 		if ((pref = [settings objectForKey:@"showAppCounts"])) self.showAppCounts = [pref boolValue];
+		if ((pref = [settings objectForKey:@"appNameType"])) self.appNameType = [pref integerValue];
 		if ((pref = [settings objectForKey:@"appSortType"])) self.appSortType = [pref integerValue];
 		if ((pref = [settings objectForKey:@"appSortOrder"])) self.appSortOrder = [pref integerValue];
 		if ((pref = [settings objectForKey:@"showSubfolderUsage"])) self.showSubfolderUsage = [pref boolValue];

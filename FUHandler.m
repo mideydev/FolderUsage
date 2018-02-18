@@ -153,7 +153,45 @@
 
 	if (proxy)
 	{
-		appDiskUsage.itemName = [proxy localizedName];
+		HBLogDebug(@"getUsageForApplication: applicationIdentifier : [%@]",[proxy applicationIdentifier]);
+		HBLogDebug(@"getUsageForApplication: itemName              : [%@]",[proxy itemName]);
+		HBLogDebug(@"getUsageForApplication: localizedName         : [%@]",[proxy localizedName]);
+		HBLogDebug(@"getUsageForApplication: localizedShortName    : [%@]",[proxy localizedShortName]);
+		HBLogDebug(@"getUsageForApplication: shortVersionString    : [%@]",[proxy shortVersionString]);
+		HBLogDebug(@"getUsageForApplication: vendorName            : [%@]",[proxy vendorName]);
+		HBLogDebug(@"getUsageForApplication: staticDiskUsage       : [%@]",[proxy staticDiskUsage]);
+		HBLogDebug(@"getUsageForApplication: dynamicDiskUsage      : [%@]",[proxy dynamicDiskUsage]);
+
+		switch ([[FUPreferences sharedInstance] appNameType])
+		{
+			case kAppLocalizedShortName:
+				appDiskUsage.itemName = [proxy localizedShortName];
+
+				if (!appDiskUsage.itemName)
+					appDiskUsage.itemName = [proxy localizedName];
+
+				break;
+
+			case kAppItemName:
+				appDiskUsage.itemName = [proxy itemName];
+
+				if (!appDiskUsage.itemName)
+					appDiskUsage.itemName = [proxy localizedName];
+
+				break;
+
+			case kAppIdentifier:
+				appDiskUsage.itemName = [proxy applicationIdentifier];
+				break;
+
+			case kAppLocalizedName:
+			default:
+				appDiskUsage.itemName = [proxy localizedName];
+				break;
+		}
+
+		if (!appDiskUsage.itemName)
+			appDiskUsage.itemName = [proxy applicationIdentifier];
 
 		switch ([[FUPreferences sharedInstance] diskUsageType])
 		{

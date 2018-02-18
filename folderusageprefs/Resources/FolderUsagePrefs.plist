@@ -98,6 +98,36 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
+			<string>APP_NAME_TYPE_LIST_LABEL</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>appNameType</string>
+			<key>id</key>
+			<string>FUAppNameType</string>
+			<key>default</key>
+			<string>0</string>
+			<key>validTitles</key>
+			<array>
+				<string>APP_NAME_TYPE_LIST_ITEM_ICON_NAME</string>
+				<string>APP_NAME_TYPE_LIST_ITEM_SHORT_NAME</string>
+				<string>APP_NAME_TYPE_LIST_ITEM_FULL_NAME</string>
+				<string>APP_NAME_TYPE_LIST_ITEM_APP_IDENTIFIER</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+			</array>
+			<key>staticTextMessage</key>
+			<string>APP_NAME_TYPE_LIST_DESCRIPTION</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
 			<string>APP_SORT_TYPE_LIST_LABEL</string>
 			<key>detail</key>
 			<string>PSListItemsController</string>

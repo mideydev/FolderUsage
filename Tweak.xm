@@ -15,6 +15,7 @@
 		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showFolderUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
+		[swipe release];
 	}
 
 	return retval;
@@ -41,9 +42,9 @@
 		return;
 	}
 
-	FUHandler *manager = [[FUHandler alloc] init];
-
-	[manager showUsageForFolder:[self folder]];
+	FUHandler *handler = [[FUHandler alloc] init];
+	[handler showUsageForFolder:[self folder]];
+	[handler release];
 }
 
 %end
@@ -62,6 +63,7 @@
 		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
+		[swipe release];
 	}
 
 	return retval;
@@ -80,6 +82,7 @@
 		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
+		[swipe release];
 	}
 
 	return retval;
@@ -97,6 +100,7 @@
 		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
+		[swipe release];
 	}
 
 	return retval;
@@ -119,9 +123,15 @@
 		return;
 	}
 
-	FUHandler *manager = [[FUHandler alloc] init];
+	if ([[%c(SBControlCenterController) sharedInstance] isVisible])
+	{
+		HBLogDebug(@"showDeviceUsage: ignored swipe while control center is visible");
+		return;
+	}
 
-	[manager showUsageForDevice:[self folder]];
+	FUHandler *handler = [[FUHandler alloc] init];
+	[handler showUsageForDevice:[self folder]];
+	[handler release];
 }
 
 %end

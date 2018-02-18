@@ -13,6 +13,7 @@
 #define FU_DEFAULT_TWEAK_ENABLED					YES
 #define FU_DEFAULT_DISK_USAGE_TYPE					kDiskUsageTotal
 #define FU_DEFAULT_SHOW_APP_USAGE					YES
+#define FU_DEFAULT_APP_NAME_TYPE					kAppLocalizedName
 #define FU_DEFAULT_SHOW_APP_COUNTS					NO
 #define FU_DEFAULT_APP_SORT_TYPE					kSortBySize
 #define FU_DEFAULT_APP_SORT_ORDER					kSortDescending
@@ -41,10 +42,18 @@ typedef NS_ENUM(NSUInteger,SortType)
 	kSortByName
 };
 
-typedef NS_ENUM(NSUInteger,SortOrder)
+typedef NS_ENUM(NSUInteger,SortOrderType)
 {
 	kSortAscending = 0,
 	kSortDescending
+};
+
+typedef NS_ENUM(NSUInteger,AppNameType)
+{
+	kAppLocalizedName = 0,
+	kAppLocalizedShortName,
+	kAppItemName,
+	kAppIdentifier
 };
 
 @interface FUPreferences : NSObject
@@ -57,6 +66,7 @@ typedef NS_ENUM(NSUInteger,SortOrder)
 
 @property(nonatomic) BOOL showAppUsage;
 @property(nonatomic) BOOL showAppCounts;
+@property(nonatomic) NSInteger appNameType;
 @property(nonatomic) NSInteger appSortType;
 @property(nonatomic) NSInteger appSortOrder;
 

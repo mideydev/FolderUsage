@@ -35,8 +35,19 @@
 @interface LSApplicationProxy : LSBundleProxy
 @property (nonatomic, readonly) NSNumber *staticDiskUsage;
 @property (nonatomic, readonly) NSNumber *dynamicDiskUsage;
+@property (nonatomic, readonly) NSString *applicationIdentifier;
+@property (nonatomic, readonly) NSString *itemName;
+@property (nonatomic, readonly) NSString *shortVersionString;
+@property (nonatomic, readonly) NSString *vendorName;
+
 + (id)applicationProxyForIdentifier:(id)arg1;
+
+//- (id)applicationIdentifier;
+//- (id)itemName;
 - (id)localizedName;
+- (id)localizedShortName;
+//- (id)shortVersionString;
+//- (id)vendorName;
 @end
 
 @interface SBIconController : UIViewController
@@ -64,6 +75,11 @@
 @end
 
 @interface SBDockIconListView : SBRootIconListView
+@end
+
+@interface SBControlCenterController : UIViewController
++ (id)sharedInstance;
+- (_Bool)isVisible;
 @end
 
 // vim:ft=objc

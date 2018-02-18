@@ -18,6 +18,28 @@ APP_USAGE_SWITCH_LABEL = "Show Apps";
 
 APP_COUNTS_SWITCH_LABEL = "Show App Counts";
 
+APP_NAME_TYPE_LIST_LABEL = "App Display Name";
+
+APP_NAME_TYPE_LIST_ITEM_ICON_NAME = "Icon Name";
+APP_NAME_TYPE_LIST_ITEM_SHORT_NAME = "Short Name";
+APP_NAME_TYPE_LIST_ITEM_FULL_NAME = "Full Name";
+APP_NAME_TYPE_LIST_ITEM_APP_IDENTIFIER = "App Identifier";
+
+APP_NAME_TYPE_LIST_DESCRIPTION = "Icon Name: Name shown on icon label
+
+Short Name: Alternate, possibly shorter name
+
+Full Name: Full title of app
+
+App Identifier: Bundle identifier of app
+
+Example:
+
+Icon Name: Alien Blue
+Short Name: AlienBlue
+Full Name: Alien Blue - reddit official client
+App Identifier: com.reddit.alienblue";
+
 APP_SORT_TYPE_LIST_LABEL = "App Sort Type";
 
 APP_SORT_TYPE_LIST_ITEM_NONE = "None";
