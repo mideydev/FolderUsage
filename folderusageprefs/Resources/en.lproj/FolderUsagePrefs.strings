@@ -1,0 +1,47 @@
+PAGE_TITLE = "FolderUsage";
+
+TWEAK_ENABLED_SWITCH_LABEL = "Enabled";
+
+DISK_USAGE_TYPE_GROUP_LABEL = "Disk Usage Options";
+
+DISK_USAGE_TYPE_LIST_LABEL = "Disk Usage";
+
+DISK_USAGE_TYPE_LIST_ITEM_STATIC = "Static Usage";
+DISK_USAGE_TYPE_LIST_ITEM_DYNAMIC = "Dynamic Usage";
+DISK_USAGE_TYPE_LIST_ITEM_TOTAL = "Total Usage";
+
+APP_GROUP_LABEL = "App Usage Options";
+
+APP_GROUP_FOOTER = "Apps are denoted by \U25B8 and are listed before any subfolders.";
+
+APP_USAGE_SWITCH_LABEL = "Show Apps";
+
+APP_SORT_TYPE_LIST_LABEL = "App Sort Type";
+
+APP_SORT_TYPE_LIST_ITEM_NONE = "None";
+APP_SORT_TYPE_LIST_ITEM_SIZE = "By Size";
+APP_SORT_TYPE_LIST_ITEM_NAME = "By Name";
+
+APP_SORT_ORDER_LIST_LABEL = "App Sort Order";
+
+APP_SORT_ORDER_LIST_ITEM_ASCENDING = "Ascending";
+APP_SORT_ORDER_LIST_ITEM_DESCENDING = "Descending";
+
+SUBFOLDER_GROUP_LABEL = "Subfolder Usage Options";
+
+SUBFOLDER_GROUP_FOOTER = "Subfolders are denoted by \U25BE and are listed after any apps.";
+
+SUBFOLDER_USAGE_SWITCH_LABEL = "Show Subfolders";
+
+SUBFOLDER_SORT_TYPE_LIST_LABEL = "Subfolder Sort Type";
+
+SUBFOLDER_SORT_TYPE_LIST_ITEM_NONE = "None";
+SUBFOLDER_SORT_TYPE_LIST_ITEM_SIZE = "By Size";
+SUBFOLDER_SORT_TYPE_LIST_ITEM_NAME = "By Name";
+
+SUBFOLDER_SORT_ORDER_LIST_LABEL = "Subfolder Sort Order";
+
+SUBFOLDER_SORT_ORDER_LIST_ITEM_ASCENDING = "Ascending";
+SUBFOLDER_SORT_ORDER_LIST_ITEM_DESCENDING = "Descending";
+
+ICON_INFO_TEXT = "icon by Woofer: https://openclipart.org/detail/193709";

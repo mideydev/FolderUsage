@@ -1,0 +1,8 @@
+/* alert dialog title */
+ALERT_TITLE = "Folder Usage";
+
+/* alert dialog "ok" button */
+ALERT_OK = "OK";
+
+/* name for home screen "folder" */
+HOME_SCREEN_NAME = "Home Screen";
