@@ -483,7 +483,7 @@
 	if (alertTitle)
 		alert.alertTitle = alertTitle;
 	else
-		alert.alertTitle = FULocalizedStringForKey(@"ALERT_TITLE");
+		alert.alertTitle = FULocalizedStringForKey(@"ALERT_TITLE_FOR_FOLDER");
 
 	alert.alertActionOK = FULocalizedStringForKey(@"ALERT_OK");
 	alert.alertActionCopy = FULocalizedStringForKey(@"ALERT_COPY");
