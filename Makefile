@@ -7,8 +7,9 @@ FolderUsage_CFLAGS += -fobjc-arc
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
-	install.exec "killall -9 SpringBoard"
+	install.exec "rm -rf /tmp/FlipswitchCache/ ; killall -9 SpringBoard"
 
 SUBPROJECTS += folderusageprefs
+SUBPROJECTS += folderusageswitch
 
 include $(THEOS_MAKE_PATH)/aggregate.mk

@@ -11,7 +11,12 @@
 {
 	[super setPreferenceValue:value specifier:specifier];
 
-//	[self synchronizeSLSUniversalCourses:value specifier:specifier];
+	id tweakEnabledSpecifier = [self specifierForID:@"FUTweakEnabled"];
+
+	if (specifier == tweakEnabledSpecifier)
+	{
+		CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),CFSTR(FU_UPDATE_SWITCH_NOTIFICATION),NULL,NULL,TRUE);
+	}
 }
 
 - (NSArray *)specifiers
@@ -19,10 +24,33 @@
 	if (!_specifiers)
 	{
 		_specifiers = [self loadSpecifiersFromPlistName:@"FolderUsagePrefs" target:self];
+
+#if 0
+		CFNotificationCenterAddObserver(
+			CFNotificationCenterGetDarwinNotifyCenter(),
+			NULL,
+			switchChanged,
+			CFSTR(FU_UPDATE_SETTINGS_NOTIFICATION),
+			NULL,
+			CFNotificationSuspensionBehaviorCoalesce
+		);
+#endif
 	}
 
 	return _specifiers;
 }
+
+#if 0
+static void switchChanged(CFNotificationCenterRef center,void *observer,CFStringRef name,const void *object,CFDictionaryRef userInfo)
+{
+	[self loadSettings];
+
+	id tweakEnabledSpecifier = [self specifierForID:@"FUTweakEnabled"];
+
+	if (tweakEnabledSpecifier)
+		[self reloadSpecifier:tweakEnabledSpecifier animated:YES];
+}
+#endif
 
 - (void)viewDidLoad
 {
@@ -60,35 +88,6 @@
 {
 	return PREFERRED_HEIGHT;
 }
-
-#if 0
-- (void)synchronizeSLSUniversalCourse:(id)value specifier:(PSSpecifier *)specifier course:(id)course
-{
-	if (specifier == course)
-		return;
-
-	[super setPreferenceValue:value specifier:course];
-	[self reloadSpecifier:course animated:YES];
-}
-
-- (void)synchronizeSLSUniversalCourses:(id)value specifier:(PSSpecifier *)specifier
-{
-	id course1 = [self specifierForID:@"FUPurifySkateparkSLS2012Hangar"];
-	id course2 = [self specifierForID:@"FUPurifySkateparkSLS2015LosAngeles"];
-	id course3 = [self specifierForID:@"FUPurifySkateparkSLS2015NewJersey"];
-	id course4 = [self specifierForID:@"FUPurifySkateparkSLS2015SuperCrown"];
-	id course5 = [self specifierForID:@"FUPurifySkateparkSLS2016Munich"];
-
-	if ((specifier != course1) && (specifier != course2) && (specifier != course3) && (specifier != course4) && (specifier != course5))
-		return;
-
-	[self synchronizeSLSUniversalCourse:value specifier:specifier course:course1];
-	[self synchronizeSLSUniversalCourse:value specifier:specifier course:course2];
-	[self synchronizeSLSUniversalCourse:value specifier:specifier course:course3];
-	[self synchronizeSLSUniversalCourse:value specifier:specifier course:course4];
-	[self synchronizeSLSUniversalCourse:value specifier:specifier course:course5];
-}
-#endif
 
 @end
 

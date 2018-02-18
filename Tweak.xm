@@ -48,7 +48,6 @@
 
 %end
 
-#if 0
 %hook SBRootFolderView
 
 #if 0
@@ -60,7 +59,7 @@
 
 	if (retval)
 	{
-		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showHomeScreenUsage:)];
+		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
 	}
@@ -78,7 +77,7 @@
 
 	if (retval)
 	{
-		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showHomeScreenUsage:)];
+		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
 	}
@@ -95,7 +94,7 @@
 
 	if (retval)
 	{
-		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showHomeScreenUsage:)];
+		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
 	}
@@ -104,22 +103,27 @@
 }
 
 %new
-- (void)showHomeScreenUsage:(UISwipeGestureRecognizer *)swipe
+- (void)showDeviceUsage:(UISwipeGestureRecognizer *)swipe
 {
-	HBLogDebug(@"showHomeScreenUsage: swiped");
+	HBLogDebug(@"showDeviceUsage: swiped");
 
 	if (![[FUPreferences sharedInstance] tweakEnabled])
 	{
-		HBLogDebug(@"showHomeScreenUsage: ignored swipe while tweak disabled");
+		HBLogDebug(@"showDeviceUsage: ignored swipe while tweak disabled");
+		return;
+	}
+
+	if (![[FUPreferences sharedInstance] deviceUsageGestureEnabled])
+	{
+		HBLogDebug(@"showDeviceUsage: ignored swipe while device usage gesture disabled");
 		return;
 	}
 
 	FUHandler *manager = [[FUHandler alloc] init];
 
-	[manager showUsageForHomeScreen:[self folder]];
+	[manager showUsageForDevice:[self folder]];
 }
 
 %end
-#endif
 
 // vim:ft=objc

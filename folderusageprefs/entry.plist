@@ -4,6 +4,8 @@
 <dict>
 	<key>entry</key>
 	<dict>
+		<key>id</key>
+		<string>FOLDERUSAGE_SETTINGS</string>
 		<key>bundle</key>
 		<string>FolderUsagePrefs</string>
 		<key>cell</key>

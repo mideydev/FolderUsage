@@ -12,9 +12,11 @@ DISK_USAGE_TYPE_LIST_ITEM_TOTAL = "Total Usage";
 
 APP_GROUP_LABEL = "App Usage Options";
 
-APP_GROUP_FOOTER = "Apps are denoted by \U25B8 and are listed before any subfolders.";
+APP_GROUP_FOOTER = "Apps are denoted by \U25B8 and are listed before any subfolders.  App counts show the number of apps in the current folder, and if applicable, the total number of apps contained in the current folder and all subfolders.";
 
 APP_USAGE_SWITCH_LABEL = "Show Apps";
+
+APP_COUNTS_SWITCH_LABEL = "Show App Counts";
 
 APP_SORT_TYPE_LIST_LABEL = "App Sort Type";
 
@@ -29,9 +31,11 @@ APP_SORT_ORDER_LIST_ITEM_DESCENDING = "Descending";
 
 SUBFOLDER_GROUP_LABEL = "Subfolder Usage Options";
 
-SUBFOLDER_GROUP_FOOTER = "Subfolders are denoted by \U25BE and are listed after any apps.";
+SUBFOLDER_GROUP_FOOTER = "Subfolders are denoted by \U25BE and are listed after any apps.  Subfolder counts are shown similarly to app counts.";
 
 SUBFOLDER_USAGE_SWITCH_LABEL = "Show Subfolders";
+
+SUBFOLDER_COUNTS_SWITCH_LABEL = "Show Subfolder Counts";
 
 SUBFOLDER_SORT_TYPE_LIST_LABEL = "Subfolder Sort Type";
 
@@ -44,4 +48,24 @@ SUBFOLDER_SORT_ORDER_LIST_LABEL = "Subfolder Sort Order";
 SUBFOLDER_SORT_ORDER_LIST_ITEM_ASCENDING = "Ascending";
 SUBFOLDER_SORT_ORDER_LIST_ITEM_DESCENDING = "Descending";
 
-ICON_INFO_TEXT = "icon by Woofer: https://openclipart.org/detail/193709";
+DEVICE_GROUP_LABEL = "Device Usage Options";
+
+DEVICE_GROUP_FOOTER = "When enabled, swipe up anywhere on the home screen to show usage for your entire device, according to your app and subfolder usage settings.  You can group device usage by home screen and dock, each represented as a subfolder of the device.";
+
+DEVICE_USAGE_GESTURE_ENABLED_SWITCH_LABEL = "Device Usage Enabled";
+
+DEVICE_USAGE_GROUP_BY_HOME_SCREEN_AND_DOCK_SWITCH_LABEL = "Group By Home Screen and Dock";
+
+DISPLAY_GROUP_LABEL = "Display Options";
+
+DISPLAY_GROUP_FOOTER = "By default, old style alerts are used on iOS 8 because they orient and rotate correctly.  However, they truncate longer text.  You can force the use of modern alerts to see all output, at the expense of proper functionality.";
+
+DISPLAY_FONT_SIZE_LIST_LABEL = "Font Size";
+
+DISPLAY_INDENT_SIZE_LIST_LABEL = "Indent Size";
+
+DISPLAY_COPY_BUTTON_SWITCH_LABEL = "Show Copy Button";
+
+DISPLAY_FORCE_MODERN_ALERTS_SWITCH_LABEL = "Force Modern Alerts (iOS 8)";
+
+CREDITS_LABEL = "Acknowledgements";

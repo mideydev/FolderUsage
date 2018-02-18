@@ -1,8 +1,29 @@
-/* alert dialog title */
-ALERT_TITLE = "Folder Usage";
+/* alert dialog title for folder usage */
+ALERT_TITLE_FOR_FOLDER = "Folder Usage";
+
+/* alert dialog title for device usage */
+ALERT_TITLE_FOR_DEVICE = "Device Usage";
 
 /* alert dialog "ok" button */
 ALERT_OK = "OK";
 
+/* alert dialog "copy" button */
+ALERT_COPY = "Copy";
+
+/* name for device "folder" */
+DEVICE_NAME = "Device";
+
 /* name for home screen "folder" */
 HOME_SCREEN_NAME = "Home Screen";
+
+/* name for dock "folder" */
+DOCK_NAME = "Dock";
+
+/* name for apps */
+APPS_NAME = "Apps";
+
+/* name for subfolders */
+SUBFOLDERS_NAME = "Subfolders";
+
+/* name for total */
+TOTAL_NAME = "Total";

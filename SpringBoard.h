@@ -41,6 +41,7 @@
 
 @interface SBIconController : UIViewController
 + (id)sharedInstance;
+- (id)dockListView;
 @end
 
 @interface SBFolderView : UIView
@@ -53,6 +54,16 @@
 @property(retain, nonatomic) SBRootFolder *folder; // @dynamic folder;
 // FolderUsage:
 - (void)showHomeScreenUsage:(UISwipeGestureRecognizer *)swipe;
+@end
+
+@interface SBIconListView : UIView
+- (id)icons;
+@end
+
+@interface SBRootIconListView : SBIconListView
+@end
+
+@interface SBDockIconListView : SBRootIconListView
 @end
 
 // vim:ft=objc

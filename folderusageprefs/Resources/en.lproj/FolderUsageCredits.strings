@@ -1,0 +1,14 @@
+PAGE_TITLE = "Acknowledgements";
+
+FFGLOBALALERTCONTROLLER_GROUP_LABEL = "FFGlobalAlertController";
+FFGLOBALALERTCONTROLLER_GROUP_FOOTER = "";
+FFGLOBALALERTCONTROLLER_INFO_LABEL = "FFGlobalAlertController License";
+
+BSALERTVIEWDELEGATEBLOCK_GROUP_LABEL = "BSAlertViewDelegateBlock";
+BSALERTVIEWDELEGATEBLOCK_GROUP_FOOTER = "";
+BSALERTVIEWDELEGATEBLOCK_INFO_LABEL = "BSAlertViewDelegateBlock License";
+
+ICON_GROUP_LABEL = "Settings Icon";
+ICON_GROUP_FOOTER = "Icon by Improulx, remixed by Woofer:
+https://openclipart.org/detail/32899/dossier-file
+https://openclipart.org/detail/193709/dossier-in-color";

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>PAGE_TITLE</string>
+	<key>items</key>
+	<array>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>FFGLOBALALERTCONTROLLER_GROUP_LABEL</string>
+			<key>footerText</key>
+			<string>FFGLOBALALERTCONTROLLER_GROUP_FOOTER</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>FFGLOBALALERTCONTROLLER_INFO_LABEL</string>
+			<key>detail</key>
+			<string>FUCreditsFFGlobalAlertControllerListController</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>BSALERTVIEWDELEGATEBLOCK_GROUP_LABEL</string>
+			<key>footerText</key>
+			<string>BSALERTVIEWDELEGATEBLOCK_GROUP_FOOTER</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>BSALERTVIEWDELEGATEBLOCK_INFO_LABEL</string>
+			<key>detail</key>
+			<string>FUCreditsBSAlertViewDelegateBlockListController</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>ICON_GROUP_LABEL</string>
+			<key>footerText</key>
+			<string>ICON_GROUP_FOOTER</string>
+		</dict>
+
+	</array>
+</dict>
+</plist>

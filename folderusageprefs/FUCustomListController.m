@@ -49,7 +49,7 @@
 
 	[self saveSettings];
 
-	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),CFSTR(FU_PREFS_CHANGED_NOTIFICATION),NULL,NULL,TRUE);
+	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),CFSTR(FU_RELOAD_PREFS_NOTIFICATION),NULL,NULL,TRUE);
 }
 
 - (id)readPreferenceValue:(PSSpecifier *)specifier

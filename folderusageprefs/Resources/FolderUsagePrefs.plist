@@ -84,6 +84,18 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>APP_COUNTS_SWITCH_LABEL</string>
+			<key>key</key>
+			<string>showAppCounts</string>
+			<key>id</key>
+			<string>FUShowAppCounts</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
 			<string>APP_SORT_TYPE_LIST_LABEL</string>
@@ -155,6 +167,18 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>SUBFOLDER_COUNTS_SWITCH_LABEL</string>
+			<key>key</key>
+			<string>showSubfolderCounts</string>
+			<key>id</key>
+			<string>FUShowSubfolderCounts</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>label</key>
 			<string>SUBFOLDER_SORT_TYPE_LIST_LABEL</string>
@@ -207,15 +231,199 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>DEVICE_GROUP_LABEL</string>
 			<key>footerText</key>
-			<string>© 2017 midey @mideydev &lt;mideydev@gmail.com&gt;</string>
+			<string>DEVICE_GROUP_FOOTER</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>DEVICE_USAGE_GESTURE_ENABLED_SWITCH_LABEL</string>
+			<key>key</key>
+			<string>deviceUsageGestureEnabled</string>
+			<key>id</key>
+			<string>FUDeviceUsageGestureEnabled</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>DEVICE_USAGE_GROUP_BY_HOME_SCREEN_AND_DOCK_SWITCH_LABEL</string>
+			<key>key</key>
+			<string>groupByHomeScreenAndDock</string>
+			<key>id</key>
+			<string>FUGroupByHomeScreenAndDock</string>
+			<key>default</key>
+			<false/>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>DISPLAY_GROUP_LABEL</string>
+			<key>footerText</key>
+			<string>DISPLAY_GROUP_FOOTER</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>DISPLAY_FONT_SIZE_LIST_LABEL</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>fontSize</string>
+			<key>id</key>
+			<string>FUFontSize</string>
+			<key>default</key>
+			<string>13</string>
+			<key>validTitles</key>
+			<array>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+				<string>14</string>
+				<string>15</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+				<string>14</string>
+				<string>15</string>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>DISPLAY_INDENT_SIZE_LIST_LABEL</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>indentSize</string>
+			<key>id</key>
+			<string>FUIndentSize</string>
+			<key>default</key>
+			<string>28</string>
+			<key>validTitles</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+				<string>14</string>
+				<string>15</string>
+				<string>16</string>
+				<string>17</string>
+				<string>18</string>
+				<string>19</string>
+				<string>20</string>
+				<string>21</string>
+				<string>22</string>
+				<string>23</string>
+				<string>24</string>
+				<string>25</string>
+				<string>26</string>
+				<string>27</string>
+				<string>28</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+				<string>14</string>
+				<string>15</string>
+				<string>16</string>
+				<string>17</string>
+				<string>18</string>
+				<string>19</string>
+				<string>20</string>
+				<string>21</string>
+				<string>22</string>
+				<string>23</string>
+				<string>24</string>
+				<string>25</string>
+				<string>26</string>
+				<string>27</string>
+				<string>28</string>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>DISPLAY_COPY_BUTTON_SWITCH_LABEL</string>
+			<key>key</key>
+			<string>copyButtonEnabled</string>
+			<key>id</key>
+			<string>FUCopyButtonEnabled</string>
+			<key>default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>DISPLAY_FORCE_MODERN_ALERTS_SWITCH_LABEL</string>
+			<key>key</key>
+			<string>forceModernAlerts</string>
+			<key>id</key>
+			<string>FUForceModernAlerts</string>
+			<key>default</key>
+			<false/>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>CREDITS_LABEL</string>
+			<key>detail</key>
+			<string>FUCreditsListController</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>ICON_INFO_TEXT</string>
+			<string>© 2017 midey @mideydev &lt;mideydev@gmail.com&gt;</string>
 		</dict>
 
 	</array>
