@@ -14,7 +14,9 @@ A Flipswitch toggle is provided for quickly enabling or disabling the tweak.
 
 Configure options from Settings.
 
-Screenshots:
+## Screenshots
+
+Usage alert examples:
 
 | Folder only: | Apps and folders, with counts: |
 | --- | --- |
