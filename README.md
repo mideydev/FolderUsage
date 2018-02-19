@@ -13,3 +13,15 @@ To squeeze more information into the window, you can customize the display by ch
 A Flipswitch toggle is provided for quickly enabling or disabling the tweak.
 
 Configure options from Settings.
+
+Screenshots:
+
+| Folder only: | Apps and folders, with counts: |
+| --- | --- |
+| <img width="250" heigth="445" alt="Example showing folder only" src="../assets/screenshots/Example-4-FolderOnly.png"> | <img width="250" heigth="445" alt="Example showing apps and folders, with counts" src="../assets/screenshots/Example-5-EverythingPlus.png"> |
+
+Preferences:
+
+| | |
+| --- | --- |
+| <img width="250" heigth="445" alt="Screenshot 1 of Preferences" src="../assets/screenshots/Preferences-1.png"> | <img width="250" heigth="445" alt="Screenshot 2 of Preferences" src="../assets/screenshots/Preferences-2.png"> |
