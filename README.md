@@ -18,9 +18,9 @@ Configure options from Settings.
 
 Usage alert examples:
 
-| Folder only: | Apps and folders, with counts: |
-| --- | --- |
-| <img width="250" heigth="445" alt="Example showing folder only" src="../assets/screenshots/Example-4-FolderOnly.png"> | <img width="250" heigth="445" alt="Example showing apps and folders, with counts" src="../assets/screenshots/Example-5-EverythingPlus.png"> |
+| Folder only: | Apps and folders: | ... with counts: |
+| --- | --- | --- |
+| <img width="250" heigth="445" alt="Example showing folder only" src="../assets/screenshots/Example-4-FolderOnly.png"> | <img width="250" heigth="445" alt="Example showing apps and folders" src="../assets/screenshots/Example-1-Everything.png"> | <img width="250" heigth="445" alt="Example showing apps and folders, with counts" src="../assets/screenshots/Example-5-EverythingPlus.png"> |
 
 Preferences:
 
