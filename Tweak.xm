@@ -4,14 +4,19 @@
 
 %hook SBFolderIconView
 
-- (id)initWithFrame:(struct CGRect)arg1
+- (id)initWithContentType:(unsigned long long)arg1
 {
 	id retval = %orig();
 
-	HBLogDebug(@"==============================[ SBFolderIconView:initWithFrame ]==============================");
+#ifdef DEBUG
+	NSString *folderName = [[self folder] displayName];
+#endif
+
+	HBLogDebug(@"==============================[ SBFolderIconView:initWithContentType ]==============================");
 
 	if (retval)
 	{
+		HBLogDebug(@"setting up icon gesture recognizer for folder: [%@]",folderName);
 		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showFolderUsage:)];
 		swipe.direction = UISwipeGestureRecognizerDirectionUp;
 		[self addGestureRecognizer:swipe];
@@ -50,44 +55,6 @@
 %end
 
 %hook SBRootFolderView
-
-#if 0
-- (id)initWithFolder:(id)arg1 orientation:(long long)arg2 viewMap:(id)arg3
-{
-	id retval = %orig();
-
-	HBLogDebug(@"==============================[ SBRootFolderView:initWithFolder ]==============================");
-
-	if (retval)
-	{
-		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
-		swipe.direction = UISwipeGestureRecognizerDirectionUp;
-		[self addGestureRecognizer:swipe];
-		[swipe release];
-	}
-
-	return retval;
-}
-#endif
-
-#if 0
-- (id)initWithFolder:(id)arg1 orientation:(long long)arg2 viewMap:(id)arg3 forSnapshot:(_Bool)arg4
-{
-	id retval = %orig();
-
-	HBLogDebug(@"==============================[ SBRootFolderView:initWithFolder (forSnapshot) ]==============================");
-
-	if (retval)
-	{
-		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showDeviceUsage:)];
-		swipe.direction = UISwipeGestureRecognizerDirectionUp;
-		[self addGestureRecognizer:swipe];
-		[swipe release];
-	}
-
-	return retval;
-}
-#endif
 
 - (id)initWithFolder:(id)arg1 orientation:(long long)arg2 viewMap:(id)arg3 context:(id)arg4
 {
