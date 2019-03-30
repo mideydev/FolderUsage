@@ -91,3 +91,5 @@ DISPLAY_COPY_BUTTON_SWITCH_LABEL = "Show Copy Button";
 DISPLAY_FORCE_MODERN_ALERTS_SWITCH_LABEL = "Force Modern Alerts (iOS 8)";
 
 CREDITS_LABEL = "Acknowledgements";
+
+COPYRIGHT_FOOTER = "\U00A9 2017-2019 midey @mideydev <mideydev@gmail.com>";

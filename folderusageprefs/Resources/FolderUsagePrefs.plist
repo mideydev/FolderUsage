@@ -453,7 +453,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>© 2017-2018 midey @mideydev &lt;mideydev@gmail.com&gt;</string>
+			<string>COPYRIGHT_FOOTER</string>
 		</dict>
 
 	</array>
