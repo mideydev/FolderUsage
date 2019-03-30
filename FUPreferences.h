@@ -83,7 +83,7 @@ typedef NS_ENUM(NSUInteger,AppNameType)
 @property(nonatomic) BOOL copyButtonEnabled;
 @property(nonatomic) BOOL forceModernAlerts;
 
-+ (FUPreferences *)sharedInstance;
++ (instancetype)sharedInstance;
 @end
 
 // vim:ft=objc
