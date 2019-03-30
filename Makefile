@@ -1,8 +1,8 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = FolderUsage
-FolderUsage_FILES = $(wildcard *.xm *.m external/*/*.m)
-FolderUsage_CFLAGS += -fobjc-arc
+$(TWEAK_NAME)_FILES = $(wildcard *.xm *.m external/*/*.m)
+$(TWEAK_NAME)_CFLAGS += -fobjc-arc
 
 Tweak.xm_CFLAGS += -fno-objc-arc
 
