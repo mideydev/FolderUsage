@@ -1,6 +1,6 @@
 Package: org.midey.folderusage
 Name: FolderUsage
-Depends: firmware (>= 8.0), mobilesubstrate
+Depends: firmware (>= 8.0), mobilesubstrate, preferenceloader
 Version: 1.0.4
 Architecture: iphoneos-arm
 Description: Swipe up on folders to view their disk usage
