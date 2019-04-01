@@ -4,6 +4,34 @@
 
 %hook SBFolderIconView
 
+%group SBFolderIconView_iOS8
+
+- (id)initWithFrame:(struct CGRect)arg1
+{
+	id retval = %orig();
+
+#ifdef DEBUG
+	NSString *folderName = [[self folder] displayName];
+#endif
+
+	HBLogDebug(@"==============================[ SBFolderIconView:initWithFrame ]==============================");
+
+	if (retval)
+	{
+		HBLogDebug(@"setting up icon gesture recognizer for folder: [%@]",folderName);
+		UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showFolderUsage:)];
+		swipe.direction = UISwipeGestureRecognizerDirectionUp;
+		[self addGestureRecognizer:swipe];
+		[swipe release];
+	}
+
+	return retval;
+}
+
+%end /* group SBFolderIconView_iOS8 */
+
+%group SBFolderIconView_iOS9OrGreater
+
 - (id)initWithContentType:(unsigned long long)arg1
 {
 	id retval = %orig();
@@ -25,6 +53,8 @@
 
 	return retval;
 }
+
+%end /* group SBFolderIconView_iOS9OrGreater */
 
 %new
 - (void)showFolderUsage:(UISwipeGestureRecognizer *)swipe
@@ -52,7 +82,7 @@
 	[handler release];
 }
 
-%end
+%end /* hook SBFolderIconView */
 
 %hook SBRootFolderView
 
@@ -60,7 +90,7 @@
 {
 	id retval = %orig();
 
-	HBLogDebug(@"==============================[ SBRootFolderView:initWithFolder (context) ]==============================");
+	HBLogDebug(@"==============================[ SBRootFolderView:initWithFolder ]==============================");
 
 	if (retval)
 	{
@@ -101,6 +131,22 @@
 	[handler release];
 }
 
-%end
+%end /* SBRootFolderView */
+
+%ctor
+{
+	/* conditional hooks */
+
+	if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0"))
+	{
+		%init(SBFolderIconView_iOS9OrGreater);
+    }
+	else
+	{
+		%init(SBFolderIconView_iOS8);
+	}
+
+	%init;
+}
 
 // vim:ft=objc
