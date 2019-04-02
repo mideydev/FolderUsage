@@ -1,6 +1,6 @@
 # FolderUsage
 
-Compatible with iOS 8.0 - 11.3.1
+Compatible with iOS 8.0 - 12.1.2
 
 Have you ever wondered how much disk space is being used by all of the apps and subfolders within a folder? Now you can swipe up on any folder to find out!
 
